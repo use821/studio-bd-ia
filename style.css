@@ -1,6 +1,52 @@
-<script src="personnages.js"></script>
-<script src="histoire.js"></script>
-<script src="bd.js"></script>
-<script src="decors.js"></script>
-<script src="pouvoirs.js"></script>
-<script src="sauvegarde.js"></script>
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+    url("https://wallpaperaccess.com/full/7445.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: white;
+}
+
+
+header {
+    text-align: center;
+    padding: 50px;
+}
+
+
+h1 {
+    font-size: 60px;
+    text-shadow: 3px 3px 10px black;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
+.card {
+    background: rgba(0,0,0,0.7);
+    padding: 25px;
+    width: 250px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+button {
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-style: italic;
+}
