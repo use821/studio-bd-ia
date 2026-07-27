@@ -1,168 +1,100 @@
-<!DOCTYPE html>
-<html lang="fr">
+<header>
 
-<head>
-<meta charset="UTF-8">
-<title>Anime Face Transformer - Comic AI Studio</title>
-
-<style>
-
-body {
-
-background:#111;
-color:white;
-font-family:Georgia;
-font-style:italic;
-text-align:center;
-padding:40px;
-
-}
-
-
-h1 {
-
-font-size:45px;
-
-}
-
-
-.zone {
-
-background:rgba(255,255,255,0.1);
-
-padding:30px;
-
-border-radius:20px;
-
-max-width:600px;
-
-margin:auto;
-
-}
-
-
-input {
-
-margin:20px;
-
-font-size:18px;
-
-}
-
-
-button {
-
-padding:15px 30px;
-
-border-radius:30px;
-
-font-size:18px;
-
-cursor:pointer;
-
-}
-
-
-#preview {
-
-margin-top:30px;
-
-max-width:300px;
-
-border-radius:20px;
-
-display:none;
-
-}
-
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<h1>⚡ Anime Face Transformer ⚡</h1>
+<h1>⚡ Comic AI Studio ⚡</h1>
 
 <p>
-Transforme un visage réel en personnage d'anime
+Crée tes mangas, tes héros et tes univers anime avec l'intelligence artificielle
 </p>
 
-
-<div class="zone">
-
-
-<input 
-type="file"
-id="photo"
-accept="image/*"
->
+</header>
 
 
-<br>
+<section class="personnages">
+
+<img src="images/heros1.png" alt="Personnage anime 1">
+
+<img src="images/heros2.png" alt="Personnage anime 2">
+
+<img src="images/heros3.png" alt="Personnage anime 3">
+
+<img src="images/heros4.png" alt="Personnage anime 4">
+
+</section>
 
 
-<button onclick="transformer()">
-Transformer en Anime
+<section class="menu">
+
+
+<div class="card">
+
+<h2>🧙 Personnages IA</h2>
+
+<p>
+Crée des héros et des personnages d'anime.
+</p>
+
+<button>
+Créer
 </button>
 
+</div>
 
-<br>
 
 
-<img id="preview">
+<div class="card">
 
+<h2>📖 Créateur BD</h2>
+
+<p>
+Transforme tes idées en bandes dessinées.
+</p>
+
+<button>
+Créer
+</button>
 
 </div>
 
 
 
 
-<script>
+<div class="card">
 
+<h2>🎨 Galerie</h2>
 
-function transformer(){
+<p>
+Conserve toutes tes créations.
+</p>
 
+<button>
+Voir
+</button>
 
-let fichier =
-document.getElementById("photo").files[0];
-
-
-if(!fichier){
-
-alert("Choisis une image");
-
-return;
-
-}
+</div>
 
 
 
-let image =
-document.getElementById("preview");
+
+<div class="card">
+
+<h2>⚔️ Combat Anime</h2>
+
+<p>
+Imagine des scènes de combat puissantes.
+</p>
+
+<button>
+Créer
+</button>
+
+</div>
 
 
-image.src =
-URL.createObjectURL(fichier);
+</section>
 
 
-image.style.display="block";
+<footer>
 
+© 2026 Comic AI Studio - L'univers de tes mangas
 
-
-alert(
-"L'image est prête pour la transformation IA Anime."
-);
-
-
-}
-
-
-</script>
-
-
-</body>
-
-</html>
+</footer>
