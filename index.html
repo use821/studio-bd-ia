@@ -1,85 +1,52 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Comic AI Studio</title>
-
-<style>
-body 
-<p>Studio BD IA en construction</p>
-    font-family: Arial, sans-serif;
-    background:#f5f5f5;
-    text-align:center;
-    padding:40px;
-}
-
-.container {
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    max-width:700px;
-    margin:auto;
-}
-
-textarea {
-    width:90%;
-    height:120px;
-    padding:10px;
-}
-
-button {
-    margin-top:20px;
-    padding:15px 30px;
-    background:#222;
-    color:white;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-}
-
-#result {
-    margin-top:30px;
-    font-size:18px;
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic AI Studio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+<header>
+    <h1>⚡ Comic AI Studio ⚡</h1>
+    <p>Crée tes propres BD, mangas et personnages avec l'intelligence artificielle</p>
+</header>
 
-<h1>🎨 Comic AI Studio</h1>
+<section class="menu">
 
-<h2>Créateur de BD avec IA</h2>
+    <div class="card">
+        <h2>🧙 Personnages IA</h2>
+        <p>Crée des héros, des ennemis et des personnages d'anime.</p>
+        <button>Créer</button>
+    </div>
 
-<p>Décris ton histoire :</p>
+    <div class="card">
+        <h2>📖 Créateur de BD</h2>
+        <p>Imagine ton histoire et construis tes pages de manga.</p>
+        <button>Créer</button>
+    </div>
 
-<textarea id="story" placeholder="Exemple : Un jeune héros découvre une cité magique..."></textarea>
+    <div class="card">
+        <h2>🎨 Galerie</h2>
+        <p>Garde toutes tes créations au même endroit.</p>
+        <button>Voir</button>
+    </div>
 
-<br>
+    <div class="card">
+        <h2>⚔️ Scènes de combat</h2>
+        <p>Crée des combats spectaculaires style anime.</p>
+        <button>Créer</button>
+    </div>
 
-<button onclick="createComic()">
-Créer ma BD
-</button>
+</section>
 
-<div id="result"></div>
+<footer>
+    <p>© 2026 Comic AI Studio - Création BD avec IA</p>
+</footer>
 
-</div>
-
-
-<script>
-
-function createComic(){
-
-let text = document.getElementById("story").value;
-
-document.getElementById("result").innerHTML =
-"📖 Création de ta BD : <br><br>" + text;
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
