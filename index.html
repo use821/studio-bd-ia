@@ -1,323 +1,267 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Comic AI Studio</title>
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 body{
-
-margin:0;
-
-min-height:100vh;
-
-font-family:Georgia,serif;
-
-font-style:italic;
-
-color:white;
-
-
-background:
-linear-gradient(
-rgba(0,0,0,0.55),
-rgba(0,0,0,0.75)
-),
-url("https://wallpaperaccess.com/full/7445.jpg");
-
-
-background-size:cover;
-
-background-position:center;
-
+    font-family:Arial,Helvetica,sans-serif;
+    background:#050816;
+    color:white;
 }
 
+.hero{
 
+    width:100%;
+    height:100vh;
 
-/* TITRE */
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.65)),
+    url("images/accueil.png");
 
-header{
+    background-size:cover;
+    background-position:center;
 
-text-align:center;
-
-padding:40px;
-
+    display:flex;
+    flex-direction:column;
 }
 
+nav{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:25px 60px;
+
+    background:rgba(0,0,0,.35);
+    backdrop-filter:blur(8px);
+}
+
+.logo{
+
+    font-size:36px;
+    font-weight:bold;
+    color:#9b5cff;
+}
+
+.logo span{
+    color:white;
+}
+
+nav ul{
+
+    list-style:none;
+    display:flex;
+    gap:35px;
+}
+
+nav ul li a{
+
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+
+    color:#9b5cff;
+}
+
+.login{
+
+    background:#7b3cff;
+    color:white;
+
+    padding:12px 24px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+}
+
+.contenu{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    flex-direction:column;
+
+    padding:30px;
+}
 
 h1{
 
-font-size:60px;
+    font-size:95px;
 
-text-shadow:5px 5px 15px black;
-
+    text-shadow:0 0 30px black;
 }
 
+h2{
 
-header p{
+    font-size:28px;
 
-font-size:25px;
-
+    margin-top:20px;
 }
 
+p{
 
+    margin-top:20px;
 
-/* PERSONNAGES */
+    max-width:750px;
 
-.personnages{
+    font-size:22px;
 
-display:flex;
-
-justify-content:center;
-
-gap:30px;
-
-flex-wrap:wrap;
-
+    line-height:1.6;
 }
 
+.boutons{
 
+    margin-top:60px;
 
-.personnages img{
+    display:flex;
 
-width:220px;
+    flex-wrap:wrap;
 
-height:320px;
+    justify-content:center;
 
-object-fit:cover;
-
-border-radius:25px;
-
-box-shadow:0 0 30px black;
-
-transition:0.5s;
-
+    gap:25px;
 }
 
+.btn{
 
-.personnages img:hover{
+    width:270px;
 
-transform:scale(1.1);
+    padding:25px;
 
+    border-radius:18px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+    box-shadow:0 0 20px rgba(0,0,0,.5);
 }
 
+.btn:hover{
 
-
-/* MENU */
-
-.menu{
-
-display:flex;
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-gap:30px;
-
-padding:50px;
-
+    transform:scale(1.08);
 }
 
-
-
-.card{
-
-width:260px;
-
-padding:25px;
-
-background:rgba(0,0,0,0.75);
-
-border-radius:25px;
-
-text-align:center;
-
-box-shadow:0 0 25px black;
-
+.personnage{
+background:#7b3cff;
 }
 
-
-
-.card h2{
-
-font-size:28px;
-
+.bd{
+background:#1f8bff;
 }
 
-
-.card p{
-
-font-size:20px;
-
+.galerie{
+background:#ff4fd8;
 }
 
-
-
-button{
-
-padding:15px 35px;
-
-border-radius:30px;
-
-border:none;
-
-font-size:18px;
-
-font-style:italic;
-
-cursor:pointer;
-
+.combat{
+background:#ff7b00;
 }
-
-
-
-button:hover{
-
-transform:scale(1.1);
-
-}
-
-
 
 footer{
 
-text-align:center;
+    text-align:center;
 
-padding:30px;
+    padding:20px;
 
+    background:#090d20;
 }
-
 </style>
 
 </head>
 
-
 <body>
 
+<section class="hero">
 
+<nav>
 
-<header>
+<div class="logo">
+COMIC <span>AI STUDIO</span>
+</div>
 
-<h1>
-⚡ Comic AI Studio ⚡
-</h1>
+<ul>
+<li><a href="#">Accueil</a></li>
+<li><a href="#">Créer</a></li>
+<li><a href="#">Galerie</a></li>
+<li><a href="#">Combats</a></li>
+<li><a href="#">Histoire</a></li>
+<li><a href="#">À propos</a></li>
+</ul>
 
+<a class="login" href="#">
+Se connecter
+</a>
+
+</nav>
+
+<div class="contenu">
+
+<h1>COMIC AI STUDIO</h1>
+
+<h2>Crée. Imagine. Donne vie à ton manga.</h2>
 
 <p>
-Crée tes mangas, héros et univers anime avec l'intelligence artificielle
+Crée des personnages, invente des histoires, génère des planches de BD,
+des décors, des scènes de combat et développe ton univers grâce à
+l'intelligence artificielle.
 </p>
 
+<div class="boutons">
 
-</header>
+<a href="#" class="btn personnage">
+👤 Créer un personnage
+</a>
 
+<a href="#" class="btn bd">
+📖 Créer une BD
+</a>
 
+<a href="#" class="btn galerie">
+🖼 Galerie
+</a>
 
+<a href="#" class="btn combat">
+⚔ Combat
+</a>
 
+</div>
 
-<section class="personnages">
-
-
-  <section class="personnages">
-
-    <img src="images/heros1.png" alt="Héros anime">
-    <img src="images/heros2.png" alt="Guerrière anime">
-    <img src="images/heros3.png" alt="Combattant anime">
-    <img src="images/heros4.png" alt="Personnage anime">
+</div>
 
 </section>
-
-</section>
-
-
-
-
-<section class="menu">
-
-
-<div class="card">
-
-<h2>🧙 Personnages IA</h2>
-
-<p>
-Crée tes héros et personnages d'anime.
-</p>
-
-<button>
-Créer
-</button>
-
-</div>
-
-
-
-<div class="card">
-
-<h2>📖 Créateur BD</h2>
-
-<p>
-Transforme tes idées en bandes dessinées.
-</p>
-
-<button>
-Créer
-</button>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h2>🎨 Galerie</h2>
-
-<p>
-Sauvegarde toutes tes créations.
-</p>
-
-<button>
-Voir
-</button>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h2>⚔️ Combat Anime</h2>
-
-<p>
-Crée des scènes de combat puissantes.
-</p>
-
-<button>
-Créer
-</button>
-
-</div>
-
-
-
-</section>
-
-
 
 <footer>
-
-© 2026 Comic AI Studio - Création de mangas avec IA
-
+© 2026 Comic AI Studio — Tous droits réservés
 </footer>
 
-
-
 </body>
-
 </html>
