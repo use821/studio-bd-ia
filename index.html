@@ -3,78 +3,134 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Anime Face Transformer - Comic AI Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Comic AI Studio</title>
 
 <style>
 
 body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: white;
 
-background:#111;
-color:white;
-font-family:Georgia;
-font-style:italic;
-text-align:center;
-padding:40px;
+    background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+    url("https://wallpaperaccess.com/full/7445.jpg");
 
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Titre */
+header {
+    text-align: center;
+    padding: 40px;
 }
 
 
 h1 {
+    font-size: 60px;
+    text-shadow: 5px 5px 15px black;
+}
 
-font-size:45px;
+
+header p {
+    font-size: 25px;
+}
+
+
+/* Personnages */
+.personnages {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+
+.personnages img {
+    width: 180px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 20px black;
+}
+
+
+/* Menu */
+.menu {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    margin: 50px;
+}
+
+
+.card {
+
+    width: 250px;
+
+    background: rgba(0,0,0,0.7);
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 0 20px black;
 
 }
 
 
-.zone {
+.card h2 {
 
-background:rgba(255,255,255,0.1);
-
-padding:30px;
-
-border-radius:20px;
-
-max-width:600px;
-
-margin:auto;
-
-}
-
-
-input {
-
-margin:20px;
-
-font-size:18px;
+    font-size: 28px;
 
 }
 
 
 button {
 
-padding:15px 30px;
+    padding: 12px 30px;
 
-border-radius:30px;
+    border-radius: 20px;
 
-font-size:18px;
+    border: none;
 
-cursor:pointer;
+    cursor: pointer;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+}
+
+
+button:hover {
+
+    transform: scale(1.1);
 
 }
 
 
-#preview {
+/* bas */
+footer {
 
-margin-top:30px;
+    text-align:center;
 
-max-width:300px;
+    padding:30px;
 
-border-radius:20px;
-
-display:none;
+    font-size:20px;
 
 }
-
 
 </style>
 
@@ -84,83 +140,112 @@ display:none;
 <body>
 
 
-<h1>⚡ Anime Face Transformer ⚡</h1>
+<header>
+
+<h1>⚡ Comic AI Studio ⚡</h1>
 
 <p>
-Transforme un visage réel en personnage d'anime
+Crée tes mangas, tes héros et tes univers anime avec l'intelligence artificielle
 </p>
 
-
-<div class="zone">
-
-
-<input 
-type="file"
-id="photo"
-accept="image/*"
->
+</header>
 
 
-<br>
+
+<section class="personnages">
+
+<img src="https://i.imgur.com/8Km9tLL.png">
+
+<img src="https://i.imgur.com/8Km9tLL.png">
+
+<img src="https://i.imgur.com/8Km9tLL.png">
+
+<img src="https://i.imgur.com/8Km9tLL.png">
+
+</section>
 
 
-<button onclick="transformer()">
-Transformer en Anime
+
+
+<section class="menu">
+
+
+<div class="card">
+
+<h2>🧙 Personnages IA</h2>
+
+<p>
+Crée des héros et des personnages d'anime.
+</p>
+
+<button>
+Créer
 </button>
 
+</div>
 
-<br>
 
 
-<img id="preview">
+<div class="card">
 
+<h2>📖 Créateur BD</h2>
+
+<p>
+Transforme tes idées en bandes dessinées.
+</p>
+
+<button>
+Créer
+</button>
 
 </div>
 
 
 
 
-<script>
+<div class="card">
 
+<h2>🎨 Galerie</h2>
 
-function transformer(){
+<p>
+Conserve toutes tes créations.
+</p>
 
+<button>
+Voir
+</button>
 
-let fichier =
-document.getElementById("photo").files[0];
-
-
-if(!fichier){
-
-alert("Choisis une image");
-
-return;
-
-}
+</div>
 
 
 
-let image =
-document.getElementById("preview");
+
+<div class="card">
+
+<h2>⚔️ Combat Anime</h2>
+
+<p>
+Imagine des scènes de combat puissantes.
+</p>
+
+<button>
+Créer
+</button>
+
+</div>
 
 
-image.src =
-URL.createObjectURL(fichier);
-
-
-image.style.display="block";
+</section>
 
 
 
-alert(
-"L'image est prête pour la transformation IA Anime."
-);
 
+<footer>
 
-}
+© 2026 Comic AI Studio - L'univers de tes mangas
 
+</footer>
 
-</script>
 
 
 </body>
