@@ -1,102 +1,168 @@
-<header>
+<!DOCTYPE html>
+<html lang="fr">
 
-<h1>⚡ Comic AI Studio ⚡</h1>
+<head>
+<meta charset="UTF-8">
+<title>Anime Face Transformer - Comic AI Studio</title>
+
+<style>
+
+body {
+
+background:#111;
+color:white;
+font-family:Georgia;
+font-style:italic;
+text-align:center;
+padding:40px;
+
+}
+
+
+h1 {
+
+font-size:45px;
+
+}
+
+
+.zone {
+
+background:rgba(255,255,255,0.1);
+
+padding:30px;
+
+border-radius:20px;
+
+max-width:600px;
+
+margin:auto;
+
+}
+
+
+input {
+
+margin:20px;
+
+font-size:18px;
+
+}
+
+
+button {
+
+padding:15px 30px;
+
+border-radius:30px;
+
+font-size:18px;
+
+cursor:pointer;
+
+}
+
+
+#preview {
+
+margin-top:30px;
+
+max-width:300px;
+
+border-radius:20px;
+
+display:none;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<h1>⚡ Anime Face Transformer ⚡</h1>
 
 <p>
-Crée tes mangas, tes héros et tes univers anime avec l'intelligence artificielle
+Transforme un visage réel en personnage d'anime
 </p>
 
-</header>
+
+<div class="zone">
 
 
-<section class="personnages">
-
-<section class="personnages">
-
-<section class="personnages">
-
-<img src="https://cdn.pixabay.com/photo/2026/06/01/12/00/anime-character-10306513.jpg" alt="Héros anime">
-
-<img src="https://hero.page/pfp/anime-pfp-male/i/masculine-anime-hero-anime-PebXUKpxZwbhUO0RTSm1" alt="Guerrier anime">
-
-<img src="https://hero.page/pfp/anime-pfp-manga-optimized/i/determined-shonen-hero-heroic-0E2ucC15nEOAr4CIhGPP" alt="Combattant anime">
-
-<img src="https://www.aiscribbles.com/img/79247/anime-style-character-portrait/" alt="Personnage anime">
-
-</section>
-<section class="menu">
+<input 
+type="file"
+id="photo"
+accept="image/*"
+>
 
 
-<div class="card">
+<br>
 
-<h2>🧙 Personnages IA</h2>
 
-<p>
-Crée des héros et des personnages d'anime.
-</p>
-
-<button>
-Créer
+<button onclick="transformer()">
+Transformer en Anime
 </button>
+
+
+<br>
+
+
+<img id="preview">
+
 
 </div>
 
 
 
-<div class="card">
 
-<h2>📖 Créateur BD</h2>
-
-<p>
-Transforme tes idées en bandes dessinées.
-</p>
-
-<button>
-Créer
-</button>
-
-</div>
+<script>
 
 
+function transformer(){
 
 
-<div class="card">
+let fichier =
+document.getElementById("photo").files[0];
 
-<h2>🎨 Galerie</h2>
 
-<p>
-Conserve toutes tes créations.
-</p>
+if(!fichier){
 
-<button>
-Voir
-</button>
+alert("Choisis une image");
 
-</div>
+return;
+
+}
 
 
 
-
-<div class="card">
-
-<h2>⚔️ Combat Anime</h2>
-
-<p>
-Imagine des scènes de combat puissantes.
-</p>
-
-<button>
-Créer
-</button>
-
-</div>
+let image =
+document.getElementById("preview");
 
 
-</section>
+image.src =
+URL.createObjectURL(fichier);
 
 
-<footer>
+image.style.display="block";
 
-© 2026 Comic AI Studio - L'univers de tes mangas
 
-</footer>
+
+alert(
+"L'image est prête pour la transformation IA Anime."
+);
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
