@@ -1,54 +1,214 @@
+/* COMIC AI STUDIO - DESIGN PRINCIPAL */
+
+* {
+    box-sizing: border-box;
+}
+
+
 body {
-    background: red !important;
-}body {
+
     margin: 0;
+
     min-height: 100vh;
-    background-image:
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+
+    font-family: "Georgia", serif;
+
+    font-style: italic;
+
+    color: white;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.75)
+    ),
     url("https://wallpaperaccess.com/full/7445.jpg");
 
     background-size: cover;
+
     background-position: center;
+
     background-attachment: fixed;
 
-    font-family: Georgia, serif;
-    font-style: italic;
-    color: white;
 }
 
+
+
+/* TITRE */
 
 header {
+
     text-align: center;
+
     padding: 50px;
+
 }
 
 
-h1 {
+header h1 {
+
     font-size: 60px;
-    text-shadow: 3px 3px 10px black;
+
+    letter-spacing: 4px;
+
+    text-shadow:
+    5px 5px 15px black;
+
 }
 
+
+
+header p {
+
+    font-size: 25px;
+
+}
+
+
+
+/* PERSONNAGES */
+
+.personnages {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+.personnages img {
+
+    width: 180px;
+
+    height: 260px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    box-shadow:
+    0 0 25px black;
+
+    transition: 0.5s;
+
+}
+
+
+
+.personnages img:hover {
+
+    transform: scale(1.15);
+
+}
+
+
+
+/* CARTES */
 
 .menu {
+
     display: flex;
+
     justify-content: center;
+
     flex-wrap: wrap;
+
     gap: 30px;
+
+    padding: 40px;
+
 }
+
 
 
 .card {
-    background: rgba(0,0,0,0.7);
-    padding: 25px;
-    width: 250px;
-    border-radius: 20px;
+
+    width: 280px;
+
+    padding: 30px;
+
+    background:
+    rgba(0,0,0,0.75);
+
+    border-radius: 25px;
+
     text-align: center;
+
+    box-shadow:
+    0 0 25px black;
+
+    transition: 0.4s;
+
 }
 
 
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+
+
+.card h2 {
+
+    font-size: 30px;
+
+}
+
+
+
+.card p {
+
+    font-size: 20px;
+
+}
+
+
+
+/* BOUTONS */
+
 button {
-    padding: 12px 25px;
-    border-radius: 20px;
+
+    padding: 15px 35px;
+
+    border-radius: 30px;
+
+    border: none;
+
     cursor: pointer;
+
+    font-size: 18px;
+
     font-style: italic;
+
+}
+
+
+
+button:hover {
+
+    transform: scale(1.1);
+
+}
+
+
+
+/* PIED DE PAGE */
+
+footer {
+
+    text-align: center;
+
+    padding: 40px;
+
+    font-size: 20px;
+
 }
